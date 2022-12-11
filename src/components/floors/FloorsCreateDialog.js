@@ -5,6 +5,12 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 
 export default function FloorsCreateDialog(token, id) {
   const [open, setOpen] = React.useState(false);
@@ -38,7 +44,7 @@ export default function FloorsCreateDialog(token, id) {
       <Button variant="outlined" disabled={!token.token} onClick={handleClickOpen} sx={{ marginLeft:5, marginTop:3 }}>
         Create Floor
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} TransitionComponent={Transition}>
         <DialogTitle>Create a floor</DialogTitle>
         <DialogContent>
           <TextField

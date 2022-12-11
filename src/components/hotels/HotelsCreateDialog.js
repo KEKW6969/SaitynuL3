@@ -6,6 +6,11 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import building from '../../hotel.jpg'
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function HotelsCreateDialog(token) {
   const [open, setOpen] = React.useState(false);
@@ -40,13 +45,10 @@ export default function HotelsCreateDialog(token) {
 
   return (
     <div>
-      <div style={{alignItems:'center'}}>
-        <img src={building} sx={{ marginLeft:5, marginTop:3 }} style={{maxWidth:5000, height:'auto'}}></img>
-      </div>
-      <Button variant="outlined" disabled={!token.token.token} onClick={handleClickOpen} sx={{ marginLeft:5, marginTop:3 }} style={{ backgroundImage: `url(${building})`, maxHeight:100 }}>
+      <Button variant="outlined" disabled={!token.token.token} onClick={handleClickOpen} sx={{ marginLeft:5, marginTop:3 }} style={{ backgroundImage: `url(${building})`, maxWidth:500 }}>
         Create Hotel
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} TransitionComponent={Transition}>
         <DialogTitle>Create a hotel</DialogTitle>
         <DialogContent>
           <TextField

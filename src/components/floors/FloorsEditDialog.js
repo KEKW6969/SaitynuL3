@@ -5,6 +5,11 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function FloorsEditDialog(token) {
   const [open, setOpen] = React.useState(false);
@@ -35,15 +40,12 @@ export default function FloorsEditDialog(token) {
     .then(data => data.json())
   }
 
-  
-
-  // || (parseJwt(token.token[0].token.accessToken).sub)
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
         Edit
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} TransitionComponent={Transition}>
         <DialogTitle>Edit floor</DialogTitle>
         <DialogContent>
           <TextField

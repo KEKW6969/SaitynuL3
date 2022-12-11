@@ -27,7 +27,7 @@ const Hotels = (token) => {
 
   const columns = [
     { field: 'id', headerName: 'Hotel ID', width: 150 },
-    { field: 'name', headerName: 'Name', width: 150 },
+    { field: 'name', headerName: 'Name', width: 200 },
     { field: 'address', headerName: 'Address', width: 300 },
     { field: 'phoneNumber', headerName: 'Phone number', width: 150 },
     { field: 'Edit',

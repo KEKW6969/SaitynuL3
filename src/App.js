@@ -16,7 +16,7 @@ import Register from './pages/Register/Register';
 import Logout from './pages/Logout/Logout';
 import Welcome from './pages/Welcome/Welcome';
 import useToken from './useToken';
-
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -38,6 +38,7 @@ function App() {
           <Route path="logout" element={<Welcome />}/>
           <Route index element={<Hotels/>}/>
       </Routes>
+      <Footer></Footer>
       </BrowserRouter>
     );
   }
@@ -57,6 +58,7 @@ function App() {
       <Route path="logout" element={<Logout setToken={setToken} token={token} />}/>
       <Route index element={<Hotels/>}/>
   </Routes>
+  <Footer></Footer>
   </BrowserRouter>
 
   );

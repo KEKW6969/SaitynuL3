@@ -1,4 +1,4 @@
-import { TextField, Grid, Paper } from '@material-ui/core'
+import { TextField, Grid} from '@material-ui/core'
 import { Button } from '@mui/material'
 import { React, useState } from 'react'
 import { useNavigate } from "react-router-dom";
@@ -34,12 +34,10 @@ const Register = () => {
   const paperStyle={padding: 20, height:'30vh', width:280, margin:"20px auto"}
   return (
     <Grid style={paperStyle}>
-
         <TextField id="outlined-basic" autoFocus fullWidth label="Username" variant="outlined" style={{padding:7}} onChange={e => setUsername(e.target.value)}/>
         <TextField id="outlined-basic2" fullWidth label="Email" variant="outlined" style={{padding:7}} onChange={e => setEmail(e.target.value)}/>
         <TextField id="outlined-basic3" fullWidth label="Password" type="password" style={{padding:7}} variant="outlined" onChange={e => setPassword(e.target.value)}/>
         <Button type='submit' color='primary' variant="contained" fullWidth   onClick={handleSubmit}>Register</Button>
-
     </Grid>
   )
 }

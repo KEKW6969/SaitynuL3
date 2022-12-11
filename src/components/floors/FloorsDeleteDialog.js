@@ -5,6 +5,11 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import { DialogContentText } from '@mui/material';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function HotelsEditDialog(token) {
   const [open, setOpen] = React.useState(false);
@@ -34,7 +39,7 @@ export default function HotelsEditDialog(token) {
       <Button variant="outlined" color='secondary' onClick={handleClickOpen}>
         Delete
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} TransitionComponent={Transition}>
         <DialogTitle>Delete floor</DialogTitle>
         <DialogContent>
           <DialogContentText>Floor's number</DialogContentText>

@@ -5,15 +5,17 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function HotelsEditDialog(token) {
   const [open, setOpen] = React.useState(false);
   const [name, setName] = React.useState(undefined);
   const [address, setAddress] = React.useState(undefined);
   const [number, setNumber] = React.useState(undefined);
-
-
-  
 
   const handleClickOpen = () => {
     setName(token.token[2])
@@ -48,7 +50,7 @@ export default function HotelsEditDialog(token) {
       <Button variant="outlined" disabled={!token.token[0].token || (token.token[6] !== token.token[5])} onClick={handleClickOpen}>
         Edit
       </Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} TransitionComponent={Transition}>
         <DialogTitle>Edit hotel</DialogTitle>
         <DialogContent>
           <TextField
