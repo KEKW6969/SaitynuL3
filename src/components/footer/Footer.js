@@ -31,7 +31,7 @@ export default function Footer() {
             }}
           >
             <Typography variant="caption" color="initial">
-              Copyright ©2022. [] Limited
+              Copyright ©2022.
             </Typography>
           </Box>
         </Container>
