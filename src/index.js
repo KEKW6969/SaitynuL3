@@ -1,5 +1,6 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+//import { createRoot } from 'react-dom';
+import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -13,12 +14,13 @@ const theme = createTheme({
     ].join(','),
   },});
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
-root.render(
+//const rootElement = document.getElementById('root');
+//const root = createRoot(rootElement);
+ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App/>
-  </ThemeProvider>
+  </ThemeProvider>,
+  document.getElementById('root')
 )
 
 

@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -11,7 +10,6 @@ export default function Footer() {
       width: '100%',
       position: 'fixed',
       bottom: 0,
-      width: '100%'
       }} component="footer" square variant="outlined">
         <Container maxWidth="lg">
           <Box
