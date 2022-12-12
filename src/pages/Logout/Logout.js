@@ -17,7 +17,6 @@ const Logout = ({token, setToken}) => {
     navigate('/hotels');
   });
   return null;
-
 }
 
 Logout.propTypes = {
