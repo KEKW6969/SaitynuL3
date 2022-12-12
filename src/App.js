@@ -30,12 +30,12 @@ function App() {
         <Outlet />
       </Grid>
       <Routes>
-          <Route path="hotels/:hotelId/floors/:floorId/rooms" element={ <Login setToken={setToken}/>}/>
-          <Route path="hotels/:id/floors" element={<Login setToken={setToken}/>}/>
-          <Route path="hotels" element={<Hotels />}/>
-          <Route path="login" element={<Login setToken={setToken}/>}/>
-          <Route path="register" element={<Register />}/>
-          <Route path="logout" element={<Welcome />}/>
+          <Route path="/hotels/:hotelId/floors/:floorId/rooms" element={ <Login setToken={setToken}/>}/>
+          <Route path="/hotels/:id/floors" element={<Login setToken={setToken}/>}/>
+          <Route path="/hotels" element={<Hotels />}/>
+          <Route path="/login" element={<Login setToken={setToken}/>}/>
+          <Route path="/register" element={<Register />}/>
+          <Route path="/logout" element={<Welcome />}/>
           <Route index element={<Hotels/>}/>
       </Routes>
       <Footer></Footer>
@@ -50,12 +50,12 @@ function App() {
     <Outlet />
   </Grid>
   <Routes>
-      <Route path="hotels/:hotelId/floors/:floorId/rooms" element={ <Rooms />}/>
-      <Route path="hotels/:id/floors" element={<Floors />}/>
-      <Route path="hotels" element={<Hotels token={token}/>}/>
-      <Route path="login" element={<Hotels />}/>
-      <Route path="register" element={<Hotels />}/>
-      <Route path="logout" element={<Logout setToken={setToken} token={token} />}/>
+      <Route path="/hotels/:hotelId/floors/:floorId/rooms" element={ <Rooms />}/>
+      <Route path="/hotels/:id/floors" element={<Floors />}/>
+      <Route path="/hotels" element={<Hotels token={token}/>}/>
+      <Route path="/login" element={<Hotels />}/>
+      <Route path="/register" element={<Hotels />}/>
+      <Route path="/logout" element={<Logout setToken={setToken} token={token} />}/>
       <Route index element={<Hotels/>}/>
   </Routes>
   <Footer></Footer>
