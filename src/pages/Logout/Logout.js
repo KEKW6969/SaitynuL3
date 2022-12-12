@@ -16,7 +16,7 @@ const Logout = ({token, setToken}) => {
     setToken(undefined);
     navigate('/hotels');
   });
-  
+  return null;
 
 }
 
