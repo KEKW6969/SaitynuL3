@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Sprendžiamo uždavinio aprašymas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sistemos paskirtis
 
-## Available Scripts
+Projekto tikslas – sukurti informacinę sistemą, kuri padėtų valdyti viešbučius.
 
-In the project directory, you can run:
+Veikimo principas – informacinę sistemą sudarys naudotojo sąsaja, kuri bus pasiekiama per internetinę aplikaciją, ir kuria naudosis visi sistemos naudotojai bei aplikacijų programavimo sąsaja (angl. trump. API).
 
-### `npm start`
+Sistemos administratorius galės sukurti ir administruoti viešbučius, jų aukštus ir kiekvieno aukšto kambarius, juos redaguoti, peržiūrėti bei šalinti. Sistemos naudotojas galės peržiūrėti, pridėti, šalinti, redaguoti kambarius ir aukštus savo viešbučiams. Neprisijungęs naudotojas galės peržiūrėti viešbučius, prisijungti bei prisiregistruoti. Neregistruotas informacinės sistemos naudotojas galės prisiregistruoti ir peržiūrėti viešbučių sąrašą.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funkciniai reikalavimai
+### Neregistruotas informacinės sistemos naudotojas galės:
+1.	Peržiūrėti prisijungimo puslapį;
+2.	Peržiūrėti registracijos puslapį;
+3.	Prisijungti prie sistemos;
+4.	Užsiregistruoti į sistemą;
+5.	Peržiūrėti viešbučių sąrašą;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<a></a>
 
-### `npm test`
+### Registruotas informacinės sistemos naudotojas galės:
+1.	Prisijungti prie sistemos;
+2.	Peržiūrėti visus viešbučius
+3.	Redaguoti savo sukurtus viešbučius, jų aukštus, kambarius.
+4.	Šalinti savo sukurtus viešbučius, jų aukštus, kambarius.
+5.	Atsijungti nuo sistemos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a></a>
 
-### `npm run build`
+### Administratorius galės:
+1.	Peržiūrėti sistemos naudotojus;
+2.	Sukurti, ištrinti, redaguoti, peržiūrėti kambarį;
+3.	Sukurti, ištrinti, redaguoti, peržiūrėti aukštą;
+4.	Sukurti, ištrinti, redaguoti, peržiūrėti viešbutį.
+5.	Atsijungti nuo sistemos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Sistemos architektūra
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Sistemos sudedamosios dalys:
+- Kliento pusė (angl. Front-end) – bus realizuojama naudojant React karkasą.
+- Serverio pusė (angl. Back-end) – bus realizuojama naudojant ASP.NET Core. Duomenų bazė MSSQL.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Likusią ataskaitos dalį galima rasti projekte arba Moodle, pavadinimas - "Ataskaita.pdf".
